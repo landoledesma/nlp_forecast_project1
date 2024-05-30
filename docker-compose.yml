@@ -1,0 +1,9 @@
+version: '3'
+services:
+  webscraper:
+    build: .
+    volumes:
+      - ./data/forecast_data:/app/data
+    environment:
+      - DISPLAY=:99
+    container_name: webscraper

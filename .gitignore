@@ -1,0 +1,17 @@
+# Archivos y carpetas a ignorar
+
+ds_test/
+venv/
+__pycache__/
+.vscode/
+*.pyc
+
+*.csv
+# Ignorar todo en la carpeta data
+data/*
+data/
+*.zip
+
+
+
+
