@@ -1,17 +1,17 @@
 import os
 
-def eliminar_archivos_con_signo_porcentaje(directorio):
-    # Lista todos los archivos en el directorio dado
-    for nombre_archivo in os.listdir(directorio):
-        # Comprueba si el nombre del archivo contiene más de un signo "%"
-        if nombre_archivo.count('%') > 1:
-            ruta_archivo = os.path.join(directorio, nombre_archivo)
-            # Elimina el archivo
-            os.remove(ruta_archivo)
-            print(f'Archivo eliminado: {ruta_archivo}')
+def delete_files_with_percentage_sign(directory):
+    # List all files in the given directory
+    for filename in os.listdir(directory):
+        # Check if the filename contains more than one "%"
+        if filename.count('%') > 1:
+            file_path = os.path.join(directory, filename)
+            # Delete the file
+            os.remove(file_path)
+            print(f'File deleted: {file_path}')
 
 if __name__ == "__main__":
-    # Especifica el directorio donde se buscarán los archivos
-    directorio = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'data', 'forecast_data')
+    # Specify the directory where the files will be searched
+    directory = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'data', 'forecast_data')
     
-    eliminar_archivos_con_signo_porcentaje(directorio)
+    delete_files_with_percentage_sign(directory)
