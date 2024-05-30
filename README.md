@@ -114,6 +114,7 @@ python scrpipts/pipeline_webscraper.py
 
 **Notes:**
 - Ensure Docker is installed and running correctly.
+- Ensure docker desktop is running for windows user
 - The downloaded XLS files will be saved in the `Forecast Data` folder within `data`.
 
 ### Directories and Files
