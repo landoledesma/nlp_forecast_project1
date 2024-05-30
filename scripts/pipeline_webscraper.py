@@ -1,15 +1,18 @@
 import os
 import subprocess
-import time
+
 
 def ensure_data_directory_exists():
-    # Checks if the 'data' directory exists, if not, creates it.
-    data_directory = os.path.join(os.getcwd(), 'data')
+    data_directory = os.path.join(os.getcwd(), '..', 'data')
+    data_directory = os.path.abspath(data_directory)
+    
     if not os.path.exists(data_directory):
         os.makedirs(data_directory)
         print(f"Directory {data_directory} created.")
     else:
         print(f"Directory {data_directory} already exists.")
+
+
 
 def build_and_run_docker_container():
     # Starts the Docker container using docker-compose
